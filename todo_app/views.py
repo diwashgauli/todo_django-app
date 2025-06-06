@@ -18,7 +18,7 @@ def todo_delete(request,id):
 
 def todo_create(request):
     if request.method=='GET':
-        return render(request,"todo_create.html")
+        return render(request,"bootstrap/todo_create.html")
     else:
         Todo.objects.create(title=request.POST["title"])
         return HttpResponseRedirect("/")
@@ -28,7 +28,7 @@ def todo_update(request,id):
         todo= Todo.objects.get(id=id)
         return render (
             request,
-            "todo_update.html",
+            "bootstrap/todo_update.html",
             {"todo":todo}
 
         )

@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<div class="row">
+            <div class="col">
+                <form action="" method="post">
+                    {%csrf_token%}
+                    <input type="text" placeholder="Enter your todo..." name="title" class="form-control" value="{{todo.title}}" />
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+</div>
+
+{% endblock content %}
