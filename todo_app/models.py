@@ -5,3 +5,4 @@ class Todo(models.Model) : #PascalCase  its like create table
 
     def __str__(self):
         return self.title
+    
